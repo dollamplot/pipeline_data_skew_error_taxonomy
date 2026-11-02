@@ -1,4 +1,4 @@
-# sampling_error_taxonomy_095cdd59
+# pipeline_data_skew_error_taxonomy
 
 （多模态场景）如何设计对照，才能把流水线的数据倾斜的真实变化与评测口径变化分开？用抽样与样本量分析报告两者之差。
 
@@ -15,9 +15,9 @@
 仅依赖 Python 标准库。
 
 ```bash
-python sampling_error_taxonomy_095cdd59.py --help
-python sampling_error_taxonomy_095cdd59.py --input sample.txt
-python sampling_error_taxonomy_095cdd59.py --input sample.txt --json
+python pipeline_data_skew_error_taxonomy.py --help
+python pipeline_data_skew_error_taxonomy.py --input sample.txt
+python pipeline_data_skew_error_taxonomy.py --input sample.txt --json
 ```
 
 输入文件按行解析。协议「失败归类」使用分隔符 `,` 区分标签与载荷。
@@ -50,7 +50,7 @@ python sampling_error_taxonomy_095cdd59.py --input sample.txt --json
 ## 复现步骤
 
 1. 按上面的分隔符准备输入文件，每行一条样本；
-2. 运行 `python sampling_error_taxonomy_095cdd59.py --input sample.txt --json`；
+2. 运行 `python pipeline_data_skew_error_taxonomy.py --input sample.txt --json`；
 3. 记录运行环境、输入文件与完整输出；
 4. **未运行的指标不要引用**：本仓库只提供测量方法与判定规则，
    不预填任何实测数字。填入实测值前请确认对应命令与输入一致。
